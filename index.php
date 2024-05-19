@@ -146,9 +146,9 @@
 <body>
     <div class="container">
         <header class="header">
-            <span class="cnrs"><img src="img/cnrs.png" alt="Logo CNRS" width="40" ></span>
-            <img src="img/lig.png" alt="Logo IRISA" width="40">
-            <img src="img/irisa.png" alt="Logo IRISA" width="120">
+            <span class="cnrs"><img src="cnrs.png" alt="Logo CNRS" width="40" ></span>
+            <img src="lig.png" alt="Logo IRISA" width="40">
+            <img src="irisa.png" alt="Logo IRISA" width="120">
             <h1>Workshop MLNS2 - Cameroun Mai 2024</h1>
             <p>Organisateurs: Alain Tchana, David Bromberg et Brice Ekane</p>
         </header>
@@ -238,9 +238,9 @@
         <footer class="footer" id="contact">
             <div class="container logo">
                 <div class="image">
-                    <img src="img/cnrs.png" alt="Logo CNRS" width="40">
-                    <img src="img/lig.png" alt="Logo IRISA" width="40">
-                    <img src="img/irisa.png" alt="Logo LIG" width="120">
+                    <img src="cnrs.png" alt="Logo CNRS" width="40">
+                    <img src="lig.png" alt="Logo IRISA" width="40">
+                    <img src="irisa.png" alt="Logo LIG" width="120">
                 </div>
                 <div class="erods">
                     <p>© Copyright 2024 | All Rights Reserved by Erods</p>
