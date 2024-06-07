@@ -1,0 +1,131 @@
+/* =====================================
+Template Name: 	BLog.
+Author Name: Alain Tchana
+Description: Blog - About Team.
+Version:	1.1
+========================================*/
+
+/*--------------------------------------------------------------
+# slyle
+--------------------------------------------------------------*/
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+.barre
+{
+  width: 100%;
+  background-color: #252a37;
+  height: 50px;
+  padding-top: 10px;
+  position: fixed;
+
+}
+
+
+
+.barre p
+{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.content
+{
+  background-color: #FAFAFC;
+  height: 1200px;
+  width: 250px;
+}
+
+.content1
+{
+  margin-left: 35px;
+}
+
+
+.content1 ul li a 
+{
+ 
+  color: black;
+
+  text-decoration: none;
+}
+
+.content1 ul li a:hover
+{
+  color: #252a37;
+
+}
+
+.content1 ul {
+  margin-left: -16px;
+}
+
+
+.content2
+{
+  margin-left: 330px;
+  margin-top: -955px;
+  width: 1400px;
+
+}
+
+.code-container {
+  position: relative;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  padding-bottom: 6px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: -64px;
+}
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fdc018;
+  font-size: 20px;
+  cursor: pointer;
+}
+.copy-button:hover {
+  color: #ccc;
+}
+
+
+
+@media only screen and (max-width: 450px) and (max-width: 767px)
+{
+    .content1, .content2 {
+        width: 100%;
+    }
+    
+    .content1 {
+        order: 1;
+      }
+    
+    .content2 {
+        order: 2;
+      }
+
+    .content2 p 
+      {
+        text-align: justify;
+      }
+
+      .content 
+      {
+        width: 100%;
+      }
+    
+
+  }
