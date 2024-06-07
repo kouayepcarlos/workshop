@@ -3,1113 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>About USM </title>
-		
-	<!-- Favicon -->
-    <link rel="icon" href="img/favicon.png">
+    <title>MLNS2 - Cameroun Mai 2024</title>
+    <link rel="icon" href="img/cnrs.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <!-- Include Font Awesome library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-		
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="bootstrap.min.css">
+        a {
+            text-decoration: none;
+            color: #333;
+        }
 
-	<!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-	
-	<!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+            height: auto;
+        }
 
-    <!-- Jquery  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        .header {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
 
-</head>
-<body >
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
 
-<div class=" barre ">
-    <p>USM official documentation. version <span style="color:#fdc018;">1.0.0</span></p>
-</div>
-
-<div class="content ">
-    <div class="row ">
-        <div class="col-3 content1">
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
             
-            <ul class="nav flex-column">
-
-            <li class="nav-item" style=" margin-left: 10px; margin-top: 90px;">
-                <h6>Getting Started</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#Installation">Installation</a></li>
-                    <li><a class="nav-link" href="#Configuration">Configuration</a></li>
-                    <li><a class="nav-link" href="#Directory">Directory Structure</a></li>
-                    <li><a class="nav-link" href="#Requirement">Requirement</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item"  style="margin-top: -3px;  margin-left: 10px;">
-                <h6>Design Architecture</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#Architecture">System architecture</a></li>
-                    
-                </ul>
-            </li>
-
-
-            <li class="nav-item" style="margin-top: -22px; margin-left: 10px;">
-                <h6>Example Allocation Policy</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#Basic">Basic Alloc</a></li>
-                    <li><a class="nav-link" href="#Double">Double Alloc</a></li>
-                    <li><a class="nav-link" href="#Reserve">Reserve Alloc</a></li>
-                    <li><a class="nav-link" href="#Hint">Hint Alloc</a></li>
-                    <li><a class="nav-link" href="#Free">Basic Free</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item"  style="margin-top: -135px; margin-left: 10px;">
-                <h6>Example Swap Policy</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#In">Swap In</a></li>
-                    <li><a class="nav-link" href="#Out">Swap Out</a></li>
-                    <li><a class="nav-link" href="#Swap">Double Swap</a></li>
-                    <li><a class="nav-link" href="#Time">Swap Time</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item" style="margin-top: -95px;  margin-left: 10px;">
-                <h6>Testing</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#LittleTest">LittleTest</a></li>
-                    <li><a class="nav-link" href="#LittleTestEvents">LittleTestEvents</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item"  style="margin-top: 19px;  margin-left: 10px;">
-                <h6>Contributors</h6>
-                <ul class="content3">
-                    <li><a class="nav-link" href="#Contributors">List_of_contributors</a></li>
-                    
-                </ul>
-            </li>
-
-          
-
-            
-
-            </ul>
-
-                
-        </div>
-        <div class=" container col-9">
-
-            <div  id="Installation" class="content2">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                    <h1 style="color:#077ea3;" >Installation</h1>
-                    <h6 style="margin-top: 20px;">### USM's repository ###</h6>
-                    <p>First, get USM's repository. You should've gotten it with this READMe. <br/> We need to first check dwarves' installed version :</p>
-
-
-                    <div class="container ">
-                        <div class="code-container" data-code="code-block-1">
-                            <pre><code id="code-block-1">pahole --version</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-1')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">
-                    ***_Skip to kernel building if the value is less than or equal to 1.22._*** <br/>
-                    If it is any higher than 1.22, we'd need to uninstall it :
-                    </p>
-
-                    <div class="container ">
-                        <div class="code-container" data-code="code-block-2">
-                            <pre><code id="code-block-2">sudo apt remove pahole dwarves -y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-2')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-3">
-                            <pre><code id="code-block-3">sudo apt install libdw-dev libbpf-dev -y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-3')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                   
-
-                    <p style="margin-top: 20px;">We'd then go into the dwarves-1.22 dependency folder (in the repo.'s *Dependencies* folder) and do :</p>
-
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-4">
-                            <pre><code id="code-block-4">mkdir build</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-4')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-5">
-                            <pre><code id="code-block-5">cd build cmake -D__LIB=lib -DBUILD_SHARED_LIBS=OFF ..</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-5')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-6">
-                            <pre><code id="code-block-6">sudo make install</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-6')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">
-                        #### Kernel building #### <br/>
-                        Then we simply compile and install the kernel and its headers. We start with, in the Kernel folder :
-                    </p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-7">
-                            <pre><code id="code-block-7">cp /boot/config-$(uname -r) .config</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-7')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    
-                    <p style="margin-top: 20px;">We then activate some options linked to *CMA* (Contiguous Memory Allocator) :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-8">
-                            <pre><code id="code-block-8">echo -e "CONFIG_CMA=y\nCONFIG_DMA_CMA=y" >> .config</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-8')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">Once again, you need to have these in your config :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-9">
-                            <pre><code id="code-block-9">CONFIG_CMA=y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-9')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-10">
-                            <pre><code id="code-block-10">CONFIG_DMA_CMA=y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-10')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    
-
-                    <p style="margin-top: 20px;">We'd then need to do this next command. It simply calls a script that modifies the config file, activating the options linked to the modules currently in use and verifying any depencies between options in the config file. It will hence prompt some questions about miscellaneous and linked options, to which we'll negatively answer to the maximum prompts possible (basically all except CMA related ones ; you should leave the CMA size prompt's value to its default).</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-11">
-                            <pre><code id="code-block-11">make localmodconfig</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-11')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">The CMA size is configured by adding **cma=2G** (or any other amount, depending on your total RAM amount) to linux's arg.s :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-12">
-                            <pre><code id="code-block-12">sudo nano /etc/default/grub</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-12')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">Your *grub* file should now look like this (*GRUB_SAVEDEFAULT* helps in applying to all subsequent boots the last booted kernel (effectively putting into *saved* the last booted Kernel's number)) :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-13">
-                            <pre><code id="code-block-13">GRUB_DEFAULT=saved</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-13')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-14">
-                            <pre><code id="code-block-14">GRUB_SAVEDEFAULT=true</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-14')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-15">
-                            <pre><code id="code-block-15">#GRUB_TIMEOUT_STYLE=hidden</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-15')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-16">
-                            <pre><code id="code-block-16">GRUB_TIMEOUT=5</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-16')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-17">
-                            <pre><code id="code-block-17">GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-17')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-18">
-                            <pre><code id="code-block-18">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-18')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-20">
-                            <pre><code id="code-block-20">GRUB_CMDLINE_LINUX="transparent_hugepage=never cgroup_disable=memory selinux=0 cma=2G"</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-20')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    
-                    <p style="margin-top: 20px;">A further important precision about *CMA*'s amount is that you should always leave at least **4G** left when trying/choosing values.
-                    Disabling key signing might as well be a good idea, to further mitigate possible related issues. It is still done by modifying _.config_, using provided scripts : </p>
-                    
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-21">
-                            <pre><code id="code-block-21">scripts/config --disable SYSTEM_TRUSTED_KEYS && scripts/config --disable SYSTEM_REVOCATION_KEYS && scripts/config --set-str CONFIG_SYSTEM_TRUSTED_KEYS "" && scripts/config --set-str CONFIG_SYSTEM_REVOCATION_KEYS ""
-                            </code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-21')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    
-            
-                    <p style="margin-top: 20px;">We then do the main part with (this first instruction's the longest in all this process) :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-22">
-                            <pre><code id="code-block-22">sudo make -j `getconf _NPROCESSORS_ONLN`</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-22')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-23">
-                            <pre><code id="code-block-23">sudo make modules_install</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-23')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-24">
-                            <pre><code id="code-block-24">sudo make install</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-24')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-25">
-                            <pre><code id="code-block-25"> sudo make headers_install INSTALL_HDR_PATH=/usr</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-25')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">`make install` already updates grub, but we can do so again, especially if you modified the grub after the latter, with :</p>
-                    
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-26">
-                            <pre><code id="code-block-26"> sudo update-grub</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-26')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">We recommend copying/saving periodically your disk image, which'd help a lot whenever your environment gets corrupted. It is located, by default, at */var/lib/libvirt/images/name_of_your_disk_image*.
-
-We further recommend disabling swapping, by either issuing a _swapoff_ command, adding `vm.swappiness = 0` to */etc/sysctl.conf*, or commenting out the line starting with `/swapfile` in */etc/fstab* ; you should do them all (!) :</p>
-                
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-27">
-                            <pre><code id="code-block-27"> sudo swapoff-a</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-27')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-28">
-                            <pre><code id="code-block-28"> sudo nano /etc/sysctl.conf</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-28')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-29">
-                            <pre><code id="code-block-29"> sudo nano /etc/fstab</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-29')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">After now rebooting in the just installed Kernel (the 5.18.9 one in the options list), the allocator and tagger can then be generated with, in the *Userspace* folder (usmAllocator's deprecated, use the API'ed version) :</p>
-
-                    <p style="margin-top: 20px;">The latters need the module loaded to properly function. Open the *Module* folder, and modify **usmMemSize** to a value ***inferior*** to the value given at boot (in this case, as we had **CMA=2G**, we'd at most put ~1.9*1024*1024*1024 in there) ; then :</p>
-
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-33">
-                            <pre><code id="code-block-33"> make</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-33')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-34">
-                            <pre><code id="code-block-34"> sudo insmod usm_lkmRM.ko</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-34')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                                        
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-30">
-                            <pre><code id="code-block-30"> cd Userspace</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-30')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-31">
-                            <pre><code id="code-block-31">cd APIv</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-31')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-32">
-                            <pre><code id="code-block-32"> make</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-32')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">You could have issues with loading the module, such as *..invalid format..*. That'd simply mean, normally, that you didn't boot with the relevant kernel, which is, for instance, of *5.18.9* version for the moment. Furthermore, you should get rid of other linux headers and related, as you won't be needing them and could be a solution if the latter didn't work :</p>
-                    
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-33">
-                            <pre><code id="code-block-33"> sudo apt remove linux-headers-*</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-33')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                
-                    <p style="margin-top: 20px;">Keep in mind that this all is under the assumption of a dedicated VM's usage. This could get rid of drivers you could need if on bare-metal, so proceed with caution in such case (tabulate and get rid of relevant thingies).
-If you still have issues loading the module until this point, you mustn't have had the required options in your *config*, at kernel compilation. Redo it all and double check, after **make localmodconfig**, if you have them still enabled.
-*..resource unavailable..* error means that the *CMA pool* couldn't be loaded at boot. The answer to that is to simply reduce the amount asked while considering what we previously mentioned, or just rebooting (could happen here and there.. not thoroughly investigated for the moment). The reserved *CMA pool* can be verified with :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-35">
-                            <pre><code id="code-block-35">sudo dmesg | grep cma</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-35')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">We then activate some options linked to *CMA* (Contiguous Memory Allocator) :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-34">
-                            <pre><code id="code-block-34"> sudo dmesg</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-34')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-
-                    <p style="margin-top: 20px;">At this point, you might be interested in blocking any annoying update kernel related :</p>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-36">
-                            <pre><code id="code-block-36"> sudo apt-mark hold linux-image-generic </code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-36')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px; margin-bottom: 20px;">
-                        <div class="code-container" data-code="code-block-37">
-                            <pre><code id="code-block-37"> sudo apt-mark hold linux-headers-generic</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-37')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-            </div>
-
-
-
-        <div id="Configuration" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Configuration</h1>
-                <h6 style="margin-top: 20px;">### Kernel building ###</h6>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-38">
-                            <pre><code id="code-block-38"> cp /boot/config-$(uname -r) .config</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-38')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">We then activate some options linked to *CMA* (Contiguous Memory Allocator) :</p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-39">
-                            <pre><code id="code-block-39"> echo -e "CONFIG_CMA=y\nCONFIG_DMA_CMA=y" >> .config</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-39')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-    
-
-                    <p style="margin-top: 20px;">Once again, you need to have these in your config :</p>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-40">
-                            <pre><code id="code-block-40">CONFIG_CMA=y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-40')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-41">
-                            <pre><code id="code-block-41">CONFIG_DMA_CMA=y</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-41')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">The CMA size is configured by adding **cma=2G** (or any other amount, depending on your total RAM amount) to linux's arg.s :</p>
-
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-42">
-                            <pre><code id="code-block-42">sudo nano /etc/default/grub</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-42')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">Your *grub* file should now look like this (*GRUB_SAVEDEFAULT* helps in applying to all subsequent boots the last booted kernel (effectively putting into *saved* the last booted Kernel's number)) :</p>
-
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-43">
-                            <pre><code id="code-block-43">GRUB_DEFAULT=saved</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-43')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-44">
-                            <pre><code id="code-block-44">GRUB_SAVEDEFAULT=true</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-44')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-45">
-                            <pre><code id="code-block-45">#GRUB_TIMEOUT_STYLE=hidden</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-45')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-46">
-                            <pre><code id="code-block-46">GRUB_TIMEOUT=5</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-46')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-47">
-                            <pre><code id="code-block-47">GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-47')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-48">
-                            <pre><code id="code-block-48">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-48')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-49">
-                            <pre><code id="code-block-49">GRUB_CMDLINE_LINUX="transparent_hugepage=never cgroup_disable=memory selinux=0 cma=2G"</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-49')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px;">modified the *configuration file* (an example is, from the *Userspace/APIv* folder, _examples/project-2/cfg/alloc_policy_assignment_strategy.cfg_) ***memory*** argument to, the pool or less you *reserved* through *CMA*, and *taken* in the *Module*.</p>
-     
-
-        </div>
-
-        <div id="Directory" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Directory Structure</h1>
-                
-                <div class="abore">
-                    <img src="abore.png" alt="rien">
-                </div>
-                <div class="abor">
-                    <img src="abore1.png" alt="rien">
-                </div>
-                
-
-        </div>
-
-
-        <div id="Requirement" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;" >Requirement </h1><br/>
-                <ul>
-                    <li>Ubuntu 22.04</li><br/>
-                    <li>Kernel 5.18.9</li><br/>
-                    <li>pahole version 1.22</li>
-
-                </ul>
-        </div>
-
-        <div id="Contributors" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">The main contributors </h1><br/>
-                <ul>
-                    <li>Assan Fall (PhD)</li><br/>
-                    <li>Alain Tchana (PR, Grenoble INP)</li><br/>
-                    <li>Renaud Lachaize (MCF, UGA)</li>
-
-                </ul>
-                <hr>
-                <h1 style="color:#077ea3;">Interns </h1><br/>
-                <ul>
-                    <li>Jocelyn Kouayep</li><br/>
-                    <li>Kilian Kemgne</li><br/>
-                    <li>Luc Mahop</li>
-
-                </ul>
-        </div>
-
-
-        <div id="LittleTest" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Example Test ( LittleTest ) </h1><br/>
-                
-
-                <div class="container">
-                <div class="code-container" data-code="code-block-50">
-                <pre><code id="code-block-50">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;sys/mman.h&gt;
-
-int main(int argc, char **argv) {
-    printf("Ha!");
-    int n = atoi(argv[1]);
-    int i = 0;
-    while (i &lt; n) {
-        void *temp = mmap(NULL, 8192, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-            i++;
-            if (temp) {
-                memset(temp, 'A', 8192);
-                printf("%c\n", *(char*)temp);
-                getchar();
-                printf("After: %c\n", *(char*)temp);
-                getchar();
-                munmap(temp, 8192);
+            margin: 20px 0;
+        }
+
+        .main-content div {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .logo 
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #1f242c;
+            height: auto;
+            padding: 10px 0;
+        }
+
+        .image 
+        {
+            background-color:white;
+            margin-top: 4px;
+        }
+
+        .footer .social-media a {
+            color: #fff;
+        }
+
+        .footer .social-media
+        {
+            margin-top: 15px;
+        }
+
+        .progr
+        {
+            color: #1c7fac;
+        }
+
+        .erods
+        {
+            color: white;
+            margin-top: 15px
+        }
+        
+        .cnrs
+        {
+            margin-top: 150px;
+        }
+        
+        .programme p {
+           text-align: justify;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        @media (min-width: 600px) {
+            .main-content div {
+                width: 50%;
             }
-    }
-    return 0;
- }</code></pre>
-                        <button class="copy-button" onclick="copyToClipboard('code-block-50')" title="Copy">
-                            <i class="bi bi-clipboard"></i>
-                        </button>
-                    </div>
+            
+            
+        }
 
-                    <!-- Add more code containers as needed -->
-                </div>
+         @media (min-width: 600px) {
+            .footer{
+                width: auto;
+                padding-bottom: 30px
+            }
+        }
 
-                <p style="margin-top: 20px;">Launch USM, with, after modifying the *config_file*'s (an example is, from the *Userspace/APIv* folder, _examples/project-2/cfg/alloc_policy_assignment_strategy.cfg_) ***memory*** argument to, the pool or less you *reserved* through *CMA*, and *taken* in the *Module* :</p>
-                
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-51">
-                            <pre><code id="code-block-51">sudo ./project-2 config_file</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-51')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
+        @media (min-width: 900px) {
+            .main-content div {
+                width: 33.33%;
+            }
+        }
 
-               
-                <p style="margin-top: 20px;">A manual (*Manual.txt*) is available in _APIv_.
-You'll have a *..CMA untakable..* if you didn't insert the module beforehand, as described earlier.
-Then, after its complete initialization, launch any application with USM's tagger:</p>
-                
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-52">
-                            <pre><code id="code-block-52">sudo LD_PRELOAD=./usmTagger ./littleTest</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-52')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
+        .programme {
+            background-color: #f4f4f4;
+            text-align: left;
+            padding: 20px;
+        }
 
+        .programme h2 {
+            margin-bottom: 10px;
+        }
+
+        .programme p {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="cnrs"><img src="cnrs.png" alt="Logo CNRS" width="40" ></span>
+            <img src="lig.png" alt="Logo IRISA" width="40">
+            <img src="irisa.png" alt="Logo IRISA" width="120">
+            <h1>Workshop MLNS2 - Cameroun Mai 2024</h1>
+            <p>Organisateurs: Alain Tchana, David Bromberg et Brice Ekane</p>
+        </header>
+        <div class="main-content">
+            <div>
+                <a href="#programm"><h2>Programme</h2></a>
+                <p>Découvrez le programme détaillé de la conférence, avec les présentations et les événements prévus.</p>
             </div>
 
-        <div id="Architecture" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;" >System Architecture </h1><br/>
-                <div >
-                    <div >
-                        <p>Shows the USM stack pictorially. USM follows a
-                            three-layer architecture consisting of kernel-level components (referred to as USMKernel), a communication and event
-                            handling layer (USMCore), and programming abstractions
-                            (usm_mm_ops, usm_swapdev_ops, libusm). The latter two
-                            layers operate in userspace as a conventional process named
-                            MMUSM.</p>
+            <div>
+                <a href="#contact"><h2>Partenaires</h2></a>
+                <p>Découvrez les partenaires de la conférence MLNS2 - Cameroun Mai 2024.</p>
+            </div>
 
-                            <p>Programmers utilize the programming abstractions to create custom policies covering all aspects of MM (𝐴1—𝐴4).
-They can initiate multiple instances of MMUSM, which can
-collaborate to optimize memory usage. Each MMUSM exclusively manages a specific set of physical pages acquired from
-USMKernel during startup. Additionally, a MMUSM can incorporate multiple MM policies.</p>
-
-                    </div>
-                    <div>
-                        <img src="arch.png" alt="rien" width="500">
-                    </div>
-                </div>
+            <div>
+                <a href="#contact"><h2>Contact</h2></a>
+                <p>Besoin d'informations supplémentaires ? Contactez-nous et nous nous ferons un plaisir de vous répondre.</p>
+            </div>
         </div>
-
-  
-        
-        <div id="Basic" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;" >Basic Alloc </h1><br/>
-
-                <p>This function is an example of USM's memory allocation policy, and provides a brief overview of what the function does. </p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-53">
-                            <pre><code id="code-block-53">pthread_mutex_lock(&policiesSet1lock)</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-53')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">Locking the free memory list: The function first locks the free memory list using the pthread_mutex_lock function, to avoid access conflicts with other threads that may be modifying the list at the same time.  </p>
-        
-                
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-54">
-                            <pre><code id="code-block-54">if (list_empty(&freeList)) { 
-pthread_mutex_unlock(&policiesSet1lock);
-return 1;
-}</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-54')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-
-                <p style="margin-top: 20px;"> Memory availability check: The function then checks whether the free page list is empty. If it is, this means there are no more pages available for allocation, and the function returns 1 to indicate allocation failure.
-                </p>
-
-
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-55">
-                            <pre><code id="code-block-55">struct optEludeList * freeListNode = list_first_entry(&freeList, struct optEludeList, iulist);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-55')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">Selecting a free memory page: If the free page list is not empty, the function selects the first free memory page in the list using the function list_first_entry </p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-56">
-                            <pre><code id="code-block-56">usedMemory+=globalPageSize;</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-56')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-        
-                <p style="margin-top: 20px;">Memory used update: The function updates the amount of memory used by adding the size of the allocated memory block to the usedMemory variable. </p>
-
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-57">
-                            <pre><code id="code-block-57">list_move_tail(&(freeListNode->iulist),&usedList);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-57')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">Move memory page to used page list: The function then moves the selected memory page from the free memory list to the used page list using the list_move_tail function. </p>
-
-
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-58">
-                            <pre><code id="code-block-58">if(usmSubmitAllocEvent(event))</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-58')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-
-                <p style="margin-top: 20px;">Allows you to update the process page table. If submission fails, the function returns 1 to indicate allocation failure. </p>
+        <section class="programme" id="programm">
+            <h2 class="progr">Mardi 21 - Séminaire scientifiques MLNS2</h2>
+            <ul>
+                <li>
+                    <p><strong>Lado Saha (ENSPY)</strong> : Présentation de l'article "Last-Level Cache Side-Channel Attacks Are Feasible in the Modern Public Cloud. Asplos 2024" de Zirui Neil Zhao et al.</p>
+                </li>
+                <li>
+                    <p><strong>Bahaouddyn Bahaouddyn (UY1)</strong>, <strong>Franck Feuwo (UY1)</strong> et <strong>Fideline Ngoufack (UY1)</strong>: Extension de hotCRP pour la prise en compte des "words matter"</p>
+                </li>
+                <li>
+                    <p><strong>Alain Tchana (Grenoble INP)</strong>, <strong>Hippolyte Tapamo (UY1)</strong>, <strong>Brice Ekane (Grenoble INP)</strong>, <strong>David Bromberg (Université de Rennes)</strong> : Un Système d'exploitation made in Cameroun.</p>
+                </li>
+            </ul>
+            <h2 class="progr">Mercredi 22 - Collaboration Université d'Ebolowa</h2>
+            <ul>
+                <li>
+                     <p>Programmes du cursus Ingénieur du Département de Génie Informatique</p>
+                </li>
+                <li>
+                     <p>Collaboration entre le Laboratoire d’Informatique et Application d’Ambam <strong>(LI2A)</strong> et l'Institut de Recherche en Informatique et Systèmes Aléatoires <strong>(IRISA)</strong></p>
+                </li>
+                <li>
+                    <p>Collaboration entre le Laboratoire d’Informatique et Application d’Ambam <strong>(LI2A)</strong> et le Laboratoire d'Informatique de Grenoble <strong>(LIG)</strong></p>
+                </li>
+                <li>
+                    <p>Collaboration entre le département de Génie Informatique de l'Université d'Ebolowa  et Grenoble INP</p>
+                </li>
+                <li>
+                    <p>Collaboration entre le département de Génie Informatique de l'Université d'Ebolowa et l’Université de Rennes.</p>
+                </li>
+            </ul>
+            
+            <h2 class="progr">Jeudi 23 - Séminaire MLNS2</h2>
+            <ul>
+                <li>
+                    <p><strong>Lado Saha (ENSPY)</strong>: Présentation de l'article "SEVeriFast : Minimizing the root of trust for fast startup of SEV microVMs. Asplos 2024" de Benjamin Holmes et al.</p>
+                </li>
+                <li>
+                    <p><strong>Pacome Kengali (ENSPY)</strong> et <strong>Daniel Tchassi (ENSPY)</strong> : Présentation de l'article "Intel TDX Demystified: A Top-Down Approach. ACM Computing Survey 2024" de PAU-CHEN CHENG et al.</p>
+                </li>
+                <li>
+                    <p><strong>Willy Watcho (ENSPY)</strong> et <strong>Franck Feuwo (UY1)</strong> : Présentation de l'article "Protect the System Call, Protect (Most of) the World with BASTION. Asplos 2023" de Christopher Jelesnianski et al.</p>
+                </li>
+                <li>
+                    <p><strong>Alain Tchana (Grenoble INP)</strong>, <strong>Hippolyte Tapamo (UY1)</strong>, <strong> Brice Ekane (Grenoble INP)</strong>, <strong> David Bromberg (Université de Rennes)</strong> : Un Système d'exploitation made in Cameroun.</p>
+                </li>
+            </ul>
+            
+            <h2 class="progr">Vendredi 24 - Séminaire MLNS2</h2>
+            <ul>
+                <li>
+                    <p><strong>Bahaouddyn Bahaouddyn (UY1)</strong> et <strong>Fideline Ngoufack (UY1)</strong> : Présentation de l'article "carbond: An Operating-System Daemon for Carbon Awareness. hotCarbon 2023" de Andreas Schmidt et al.</p>
+                </li>
+                <li>
+                    <p><strong>Bahaouddyn Bahaouddyn (UY1)</strong> et <strong>Fideline Ngoufack (UY1)</strong> : Présentation de l'article "Carbon-Aware Memory Placement. hotCarbon 2023" de Sven Köhler et al.</p>
+                </li>
+                <li>
+                    <p><strong>Alain Tchana (Grenoble INP)</strong>, <strong> Hippolyte Tapamo (UY1)</strong>, <strong> Brice Ekane (Grenoble INP)</strong>, <strong> David Bromberg (Université de Rennes)</strong> : Un Système d'exploitation made in Cameroun.</p>
+                </li>
+            </ul>
+            
+            
+            
+        </section>
 
         
-    
-        
+            <!-- Ajout du footer -->
+        <footer class="footer" id="contact">
+            <div class="container logo">
+                <div class="image">
+                    <img src="cnrs.png" alt="Logo CNRS" width="40">
+                    <img src="lig.png" alt="Logo IRISA" width="40">
+                    <img src="irisa.png" alt="Logo LIG" width="120">
+                </div>
+                <div class="erods">
+                    <p>© Copyright 2024 | All Rights Reserved by Erods</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://twitter.com/alaintchana2?lang=ca" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://perso.ens-lyon.fr/alain.tchana/" target="_blank"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.linkedin.com/in/pr-alain-tchana-72516722/?originalSubdomain=fr" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/watch?v=_BPwaiXnoOQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-
-
-            
-
-            <div id="Double" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;" >Double Alloc </h1><br/>
-
-                <p>This function is used to allocate two consecutive pages in a process's virtual memory. It performs the following steps : </p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-59">
-                            <pre><code id="code-block-59">if (basic_alloc(event))
-    return 1;</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-59')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">First, it calls the basic_alloc function to allocate the first page. If allocation fails, the function returns 1 to indicate failure. </p>
-            
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-60">
-                            <pre><code id="code-block-60">event->vaddr+=SYS_PAGE_SIZE;</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-60')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">Next, it updates the virtual address in the usm_event structure, adding the size of a page (SYS_PAGE_SIZE) to prepare for the allocation of the second page. </p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-61">
-                            <pre><code id="code-block-61">if (basic_alloc(event)) {
-#ifdef DEBUG
-    printf("[devPolicies/Sys] Unapplied allocation.. though not mandatory.\n");
-#endif
-return 0;
-}</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-61')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-
-                <p style="margin-top: 20px;">It calls the basic_alloc function again to allocate the second page. If allocation fails, it displays an error message and returns 0. </p>
-
-
-
-            
-            
-            
-            </div>
-
-
-
-
-
-
-            <div id="Free" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Basic Free</h1>
-                
-                <p> The pindex_free function is used to free a previously allocated memory page.</p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-61">
-                            <pre><code id="code-block-61">struct page * usmPage = usmEventToPage(event);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-61')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-
-                <p style="margin-top: 20px;">Next, it updates the virtual address in the usm_event structure, adding the size of a page (SYS_PAGE_SIZE) to prepare for the allocation of the second page. </p>
-                
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-62">
-                            <pre><code id="code-block-62">pthread_mutex_lock(&procDescList[usmPage->process].alcLock);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-62')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-63">
-                            <pre><code id="code-block-63">list_del_init(usmPage->processUsedListPointer);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-63')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-64">
-                            <pre><code id="code-block-64">pthread_mutex_unlock(&procDescList[usmPage->process].alcLock);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-64')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-65">
-                            <pre><code id="code-block-65">memset((void*)(usmPage->data), 0, 4096);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-65')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">If the page has been allocated, the function removes the page from the list of allocated pages for the corresponding process using list_del_init. It then sets the page data to zero using memset. </p>
-
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-66">
-                            <pre><code id="code-block-66">pthread_mutex_lock(&policiesSet1lock);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-66')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-67">
-                            <pre><code id="code-block-67">usmPage->virtualAddress=0;</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-67')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-68">
-                            <pre><code id="code-block-68">decreaseProcessAllocatedMemory(usmPage->process, SYS_PAGE_SIZE);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-68')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-69">
-                            <pre><code id="code-block-69">usedMemory-=SYS_PAGE_SIZE;</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-69')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-70">
-                            <pre><code id="code-block-70">pthread_mutex_unlock(&policiesSet1lock);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-70')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">Finally, the function updates the memory usage information by decrementing the amount of memory allocated for the process and adding the page to the list of free pages. </p>
-
-
-
-             </div>
-
-
-
-
-             <div id="In" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Swap In </h1>
-                
-                <p> Exchanges pages between main memory and swap memory when main memory is insufficient.</p>
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-71">
-                            <pre><code id="code-block-71">if(usedMemory < poolSize/2.5){
-    pthread_t worker;
-    int nr = (swappedMemory / SYS_PAGE_SIZE);
-    if (nr>0){
-        pthread_create(&worker, NULL, swap_in_list_and_commit, &nr);
-    }
-}</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-71')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-
-                <p style="margin-top: 20px;">usedMemory is the amount of memory currently in use, poolSize is the total memory size, and swappedMemory is the amount of memory currently in swap memory. SYS_PAGE_SIZE is the size of a memory page. If usedMemory is less than 40% of poolSize, the function creates a new thread to swap nr pages from swap memory to main memory. </p>
-
-
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-72">
-                            <pre><code id="code-block-72">if(event->type==FREE) {
-    pthread_mutex_lock(&procDescList[event->origin].swpLock);
-    if (list_empty(&procDescList[event->origin].swapList)) {
-        printf("Proc. used list empty man!\n");
-        pthread_mutex_unlock(&procDescList[event->origin].swpLock);
-        return;
-    }
-    else
-        printf("Not empty!\n");
-    pthread_mutex_unlock(&procDescList[event->origin].swpLock);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-72')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-           
-                <p style="margin-top: 20px;">If the event is of type FREE, this means that a page of memory has been freed. The function then checks whether the process swap list is empty. If so, it displays a message and returns. Otherwise, it continues. </p>
-           
-           
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-73">
-                            <pre><code id="code-block-73">struct to_swap *toSwapNode= (struct to_swap *)malloc(sizeof(struct to_swap));
-struct optEludeList * victimPageNode = list_first_entry(&procDescList[event->origin].usedList,struct optEludeList,proclist);
-hold_used_page(&victimPageNode->iulist);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-73')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-           
-                <p style="margin-top: 20px;">Here, the function allocates memory for a new to_swap node, which will be used to store information about the page to be swapped. Next, it retrieves the first node in the process's list of used pages and calls hold_used_page on this node. </p>
-           
-           
-           
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-74">
-                            <pre><code id="code-block-74">if(toSwapNode->swapDevice->swap_dev_ops.swap_in(toSwapNode))
-#ifdef DEBUG
-    printf("\tHehehhe... failed.\n");
-else
-    printf("Swapped in used page!\n");
-#else
-    ;
-#endif</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-74')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-           
-                <p style="margin-top: 20px;">Finally, the function calls the swap_in function of the swap device to swap the page from swap memory to main memory. If the compilation is in debug mode, it displays a message if the operation fails or succeeds. </p>
-           
-         
-            </div>
-
-
-            <div id="Out" class="content2" style="display:none;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>
-                <h1 style="color:#077ea3;">Swap Out </h1>
-                
-                <p>This function is used to check whether the memory used exceeds a certain limit and, if so, free up memory by swapping less-used memory pages on disk (called “swap out”).</p>
-            
-            
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-75">
-                            <pre><code id="code-block-75">if(event->type==ALLOC ) {
-    if(usedMemory>6442450944) {
-    // ...
-    while(usedMemory>5368709120) {
-        
-    ....
-
-    }
-    }
-}</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-75')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-           
-                <p style="margin-top: 20px;">The function is called with a pointer to a usm_event structure, which contains information about the memory event that has occurred. If the event is a memory allocation (event->type==ALLOC), the function checks whether the memory used exceeds the limit and, if so, performs a “swap out”. </p>
-           
-            
-            
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-76">
-                            <pre><code id="code-block-76">struct to_swap * toSwapOut = (struct to_swap *)malloc(sizeof(struct to_swap));
-
-// ...
-
-toSwapOut->page=victimPageNode->usmPage;
-toSwapOut->proc=victimPageNode->usmPage->process;
-toSwapOut->swapped_address=victimPageNode->usmPage->virtualAddress;
-toSwapOut->swapDevice=choose_swap_device(toSwapOut->proc);</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-76')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-           
-                <p style="margin-top: 20px;">The function then allocates a new to_swap structure to store information about the memory page to be swapped out, including a pointer to the page itself (toSwapOut->page), the ID of the process that owns the page (toSwapOut->proc), the virtual address of the page (toSwapOut->swapped_address) and a pointer to the swap device structure to be used for the “swap out” (toSwapOut->swapDevice).</p>
-           
-            
-            
-                        
-                <div class="container " style="margin-top: 20px;">
-                        <div class="code-container" data-code="code-block-77">
-                            <pre><code id="code-block-77">if(toSwapOut->swapDevice->swap_dev_ops.swap_out(toSwapOut)) {
-    // ...
-}</code></pre>
-                            <button class="copy-button" onclick="copyToClipboard('code-block-77')" title="Copy"><i class="bi bi-clipboard"></i></button>
-                        </div>
-                </div>
-           
-                <p style="margin-top: 20px;">Finally, the function “swaps out” the memory page to disk by calling the swap_out function of the selected swap device (toSwapOut->swapDevice). If the call succeeds, the function continues the loop and selects another memory page to swap. If the call fails, the function exits the loop and reports an error.</p>
-           
-            
-            </div>
-
-        </div>    
-        
-
-    </div>
-        
-        
-    </div>
-</div>
-
-<script>
-        $(document).ready(function(){
-            $('.nav-link').click(function(){
-                $('.content2').hide();
-                var contentId = $(this).attr('href');
-                $(contentId).show();
-            });
-        });
-    </script>
-
-<!-- <script>
-function copyToClipboard(text) {
-  var dummy = document.createElement("textarea");
-  document.body.appendChild(dummy);
-  dummy.value = text;
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-  alert("Well copied");
-}
-</script> -->
-
-
-<script>
-    function copyToClipboard(codeBlockId) {
-        const code = document.getElementById(codeBlockId).innerText;
-        const textArea = document.createElement('textarea');
-        textArea.value = code;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('Code copied to clipboard');
-    }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
+        </footer>
+      </div>
+   
 </body>
 </html>
